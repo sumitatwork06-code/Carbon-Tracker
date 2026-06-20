@@ -1,5 +1,17 @@
 # Carbon Footprint Tracker
 
+## Challenge Details
+*   **Chosen Vertical**: Environmental Sustainability (Carbon Footprint Tracking & AI-powered Reduction Planning).
+*   **How the Solution Works**:
+    1. **Logging**: Users input daily transportation distance, transport mode, dietary preference, and electricity usage via a keyboard-accessible, validation-gated form.
+    2. **Calculations**: A pure calculation engine applies standard carbon conversion metrics to find the daily output (e.g., 0.21 kg/km for car, 7.19 kg/day for omnivore diet, 0.233 kg/kWh for electricity).
+    3. **Dashboard & Visualization**: Renders daily scores on a responsive Area Chart, indicating performance compared to a customizable target goal (default 50kg CO2e).
+    4. **AI Insights**: Gathers weekly activity and calls `gemini-2.5-flash` using the official `@google/genai` SDK to generate exactly three personalized, actionable, structured reduction tips.
+*   **Assumptions Made**:
+    - **Target Budget**: A baseline target limit of 50 kg CO2e per day is assumed as a default green benchmark.
+    - **Conversion Coefficients**: Calculations assume standard global averages for carbon emissions (such as EPA or carbon offset averages).
+    - **Database Environment**: SQLite (`carbon.db`) is assumed to be running in a persistent disk state (or fallback JSON mock if native bindings fail to load).
+
 ## Problem Statement Alignment
 The application enables users to track their daily carbon emissions across primary emission categories: transportation, diet, and electricity usage. By logging these activities, the system calculates individual emissions in real-time. It integrates the Gemini Pro API to generate three personalized, actionable insights structured to help users lower their carbon footprint.
 
