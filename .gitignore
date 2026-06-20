@@ -1,0 +1,46 @@
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# local env files
+.env*.local
+.env
+
+# databases
+carbon.db
+carbon.db-journal
+carbon.db-shm
+carbon.db-wal
+logs.json
+
+# virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# chrome debug profiles
+/chrome-profile/
+chrome_stderr*.txt
+DevToolsActivePort
+verification_log.txt
+
+# OS files
+.DS_Store
+Thumbs.db

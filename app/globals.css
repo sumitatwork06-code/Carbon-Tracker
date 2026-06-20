@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-emerald-glow: rgba(16, 185, 129, 0.3);
+  --color-teal-glow: rgba(45, 212, 191, 0.3);
+}
+
+@layer utilities {
+  .glass-panel {
+    @apply bg-slate-900/30 border border-slate-800/80 backdrop-blur-sm;
+  }
+}
+
+@keyframes waterfall {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: -100;
+  }
+}
+
+.animate-waterfall {
+  animation: waterfall 4s linear infinite;
+}
+
+.animate-waterfall-fast {
+  animation: waterfall 2s linear infinite;
+}
+
